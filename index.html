@@ -376,6 +376,52 @@
       color: var(--text);
     }
 
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      overflow: hidden;
+    }
+
+    .about-card {
+      background: var(--bg);
+      padding: 2rem 2.25rem;
+      transition: background 0.2s;
+    }
+
+    .about-card:hover { background: var(--bg2); }
+
+    .about-icon {
+      font-size: 1.2rem;
+      color: var(--terra);
+      margin-bottom: 0.75rem;
+      line-height: 1;
+    }
+
+    .about-card-title {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .about-card-text {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── CTA ── */
     .cta-section {
       display: grid;
@@ -490,6 +536,7 @@
     <ul class="nav">
       <li><a href="#cases">Работы</a></li>
       <li><a href="#stack">Инструменты</a></li>
+      <li><a href="#about">О себе</a></li>
       <li><a href="#contact">Связь</a></li>
     </ul>
   </div>
@@ -683,6 +730,55 @@
       <div class="stack-cat">Съёмка</div>
       <div class="stack-name">Многокамерные системы</div>
     </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ═══════════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">О себе и <em>команде</em></h2>
+  </div>
+
+  <div class="about-grid">
+
+    <div class="about-card">
+      <div class="about-icon">⚙</div>
+      <div class="about-card-title">AI и нейросети</div>
+      <p class="about-card-text">
+        Активно работаю с ComfyUI, Stable Diffusion, AI face replacement, нейронной чисткой звука.
+        Пишу собственные проекты на базе нейросетей — не просто пользователь, а практик.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <div class="about-icon">◈</div>
+      <div class="about-card-title">Виртуальные инфлюенсеры</div>
+      <p class="about-card-text">
+        Есть опыт создания AI-персонажей и работы с виртуальными инфлюенсерами —
+        от концепции до готового визуала.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <div class="about-icon">◎</div>
+      <div class="about-card-title">Команда под проект</div>
+      <p class="about-card-text">
+        Работал на разных проектах с разными командами. Могу подключить:
+        продюсера, монтажёра, саунд-дизайнера, композитора, моушн-дизайнера.
+        Один звонок — закрываем любую задачу.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <div class="about-icon">◻</div>
+      <div class="about-card-title">Как я работаю</div>
+      <p class="about-card-text">
+        Коммуникабельный, исполнительный, довожу до конца без напоминаний.
+        Вникаю в задачу, предлагаю решения, не жду пока скажут что делать.
+      </p>
+    </div>
+
   </div>
 </section>
 
