@@ -61,12 +61,25 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       font-family: 'Unbounded', sans-serif;
       font-size: 0.7rem;
       font-weight: 300;
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--gold);
+    }
+
+    .logo-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 1px solid var(--terra-dim);
+      filter: grayscale(20%);
     }
 
     .nav {
@@ -386,6 +399,25 @@
       opacity: 0.85;
     }
 
+    /* ── ABOUT PHOTO ── */
+    .about-photo-row {
+      margin-bottom: 3rem;
+    }
+
+    .about-photo {
+      width: 280px;
+      height: 380px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: var(--r);
+      filter: grayscale(15%) contrast(1.05);
+      border: 1px solid var(--line);
+    }
+
+    @media (max-width: 768px) {
+      .about-photo { width: 100%; height: 300px; }
+    }
+
     /* ── ABOUT ── */
     .about-grid {
       display: grid;
@@ -542,7 +574,10 @@
 <!-- ══ HERO ══════════════════════════════════════════════════════ -->
 <div class="hero">
   <div class="hero-top">
-    <div class="logo">Барсуков</div>
+    <div class="logo">
+      <img src="photo-avatar.jpg" alt="Елисей Барсуков" class="logo-avatar" />
+      Барсуков
+    </div>
     <ul class="nav">
       <li><a href="#cases">Работы</a></li>
       <li><a href="#about">О себе</a></li>
@@ -769,6 +804,10 @@
   <div class="section-header">
     <span class="section-num">03</span>
     <h2 class="section-title">О себе и <em>команде</em></h2>
+  </div>
+
+  <div class="about-photo-row">
+    <img src="photo-main.jpg" alt="Елисей Барсуков с камерой" class="about-photo" />
   </div>
 
   <div class="about-grid">
